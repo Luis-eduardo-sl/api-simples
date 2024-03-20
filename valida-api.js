@@ -17,4 +17,29 @@ async function postAlunos(payload) {
     return response;
   }
 
-module.exports = {principal, postAlunos}
+async function getAlunos() {
+  const response = await axios.get(`${baseUrl} `)
+
+  return response
+}
+
+async function getAlunoById(payload){
+  const response= await axios.get(`${baseUrl}/${payload}`, )
+
+  return response
+}
+
+async function putUsuarios(payload){
+  const response = await axios.put(`${baseUrl}/${payload}`)
+
+  return response
+}
+
+async function deleteUsuarios(payload){
+  const response = await axios.delete(`${baseUrl}/${payload}`)
+
+  return response
+}
+
+
+module.exports = {principal, postAlunos, getAlunos, getAlunoById, putUsuarios, deleteUsuarios}
