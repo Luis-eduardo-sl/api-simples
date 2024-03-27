@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "node ./api_simples.js",
     "test": "jest"
   },
   "dependencies": {
