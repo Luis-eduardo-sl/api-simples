@@ -21,7 +21,7 @@ app.post('/alunos', (req, res) => {
     const idAluno = uuidv4();
     aluno.id = idAluno;
     alunos[idAluno] = aluno;
-    res.json({msg: 'Aluno adicionado com sucesso!'});
+    res.status(201).json({aluno});
 });
 
 app.get('/alunos', (req, res) => {
